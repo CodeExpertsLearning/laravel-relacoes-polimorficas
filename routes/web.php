@@ -69,3 +69,23 @@ Route::get('/many', function(){
 
 });
 
+
+
+Route::get('/m-m', function(){
+    // \App\Tag::create(['name' => 'Tecnologia']);
+    // \App\Tag::create(['name' => 'Finanças']);
+    //return \App\Tag::all();
+
+    // $post = \App\Post::first();
+    // // dd($post->tags()->sync([1,2]));
+
+    // return $post->tags;
+
+    //$video = \App\Video::first();
+    // dd($video->tags()->sync([2]));
+
+    // return $video->tags;
+
+    $tag = \App\Tag::find(1);
+    return $tag->videos;
+});
